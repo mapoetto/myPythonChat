@@ -40,7 +40,7 @@ def being_server():
 	print("Feeling lonley.... waiting for friend to join :)")
 
 	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as soc:
-		soc.bind(("localhost",port))
+		soc.bind(("",port))
 		soc.listen()
 		conn, addr = soc.accept()
 		with conn:
